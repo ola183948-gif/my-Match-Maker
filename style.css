@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d9f0ff, #ffe1ef, #e8ddff);
+  color: #34265f;
+  padding: 30px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+.logo {
+  display: inline-block;
+  background: linear-gradient(135deg, #5541bd, #a14ce0);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px 28px;
+  border-radius: 22px;
+  box-shadow: 0 7px 0 #392a88;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-top: 25px;
+  color: #49359b;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #765caa;
+  font-size: 1.05rem;
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px #6552a52a;
+  border: 3px solid white;
+}
+
+.hearts {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation: float 2s infinite ease-in-out;
+}
+
+h2 {
+  font-size: 1.65rem;
+  color: #6a45c4;
+}
+
+.description {
+  color: #857a9f;
+  margin: 12px 0 25px;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin: 12px 0 8px;
+  font-weight: bold;
+  color: #6650aa;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #d9c9ff;
+  border-radius: 14px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  background: #fcfaff;
+}
+
+input:focus {
+  border-color: #8855df;
+  box-shadow: 0 0 0 4px #8855df20;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#matchButton {
+  margin-top: 25px;
+  padding: 17px;
+  color: white;
+  background: linear-gradient(135deg, #714de0, #a34edb);
+  box-shadow: 0 6px 0 #5134a8;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 22px 15px;
+  border: 2px dashed #d5baff;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fff2fa, #f1edff);
+  min-height: 180px;
+}
+
+.result-heart {
+  font-size: 2.5rem;
+}
+
+.result h3 {
+  color: #7045bd;
+  margin: 8px 0;
+  font-size: 1.35rem;
+}
+
+#message {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e64d91;
+  margin-top: 12px;
+}
+
+.score-bar {
+  height: 14px;
+  background: #e4dcf7;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+#scoreFill {
+  width: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #7b54e8, #ff72b6);
+  transition: width 1s ease;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #ffe0ef;
+  color: #a83c79;
+}
+
+footer {
+  margin-top: 25px;
+  line-height: 1.8;
+  color: #6650aa;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #887c9e;
+}
+
+.result.show {
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  70% { transform: scale(1.03); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.6rem;
+    padding: 13px 18px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+
+  .game-card {
+    padding: 22px 17px;
+  }

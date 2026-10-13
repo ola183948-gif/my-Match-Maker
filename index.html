@@ -1,0 +1,69 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Maker 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="logo">💖 Match Maker</div>
+      <h1>Find Your Perfect Match!</h1>
+      <p class="subtitle">✨ Two names, one amazing result! ✨</p>
+    </header>
+
+    <main class="game-card">
+      <div class="hearts">💗 💜 💗</div>
+      <h2>Who's Your Match? 💕</h2>
+      <p class="description">
+        Enter two names and discover your match score!
+      </p>
+
+      <form id="matchForm">
+        <label for="name1">🌸 First Name</label>
+        <input
+          type="text"
+          id="name1"
+          placeholder="Enter the first name..."
+          maxlength="40"
+        >
+
+        <label for="name2">🦋 Second Name</label>
+        <input
+          type="text"
+          id="name2"
+          placeholder="Enter the second name..."
+          maxlength="40"
+        >
+
+        <button type="submit" id="matchButton">
+          💘 Generate Match!
+        </button>
+      </form>
+
+      <div id="result" class="result" aria-live="polite">
+        <div class="result-heart">💝</div>
+        <h3>Your Match Result</h3>
+        <p id="message">Your magical result will appear here!</p>
+        <div class="score-bar">
+          <div id="scoreFill"></div>
+        </div>
+        <div id="score"></div>
+      </div>
+
+      <button id="resetButton" class="reset-button" type="button">
+        🔄 Try Again
+      </button>
+    </main>
+
+    <footer>
+      <p>🌈 Made with love, fun & a little magic! ✨</p>
+      <p class="note">Just for fun — every friendship is special! 💖</p>
+    </footer>
+  </div>
+
+</body>
